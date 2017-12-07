@@ -10,13 +10,13 @@ if py3:
 
 class RepoStats(object):
     symbols = {
-        'detached': u'\u2693',
-        'ahead': u'\u2B06',
-        'behind': u'\u2B07',
-        'staged': u'\u2714',
-        'changed': u'\u270E',
-        'new': u'?',
-        'conflicted': u'\u273C'
+        'detached': u'\u26A1',   # ⚡    HIGH VOLTAGE
+        'ahead': u'\u2191',      # ↑    up arrow
+        'behind': u'\u2193',     # ↓    down arrow
+        'staged': u'\u2714',     # ✔    checkmark/tick
+        'changed': u'\u2690',    # ⚐    changes not staged
+        'new': u'\u002B',        # +    files not tracked
+        'conflicted': u'\u2600'  # ☀    star
     }
 
     def __init__(self, ahead=0, behind=0, new=0, changed=0, staged=0, conflicted=0):
