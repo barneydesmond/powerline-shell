@@ -30,7 +30,7 @@ class DefaultColor(object):
     SSH_FG = 254
 
     # original clean bg = 148  # a light green color
-    # original dirty bd = 161  # pink/red
+    # original dirty bg = 161  # pink/red
     REPO_CLEAN_BG = 83  # a light green color
     REPO_CLEAN_FG = 0  # black
     REPO_DIRTY_BG = 88  # pink/red
