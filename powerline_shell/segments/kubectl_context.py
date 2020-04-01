@@ -15,6 +15,10 @@ class Segment(BasicSegment):
             # CalledProcessError is thrown if non-zero returncode, like if we
             # don't have a kubectl context
             return
+        except OSError:
+            # OSError is thrown if kubectl doesn't exist, I think.
+            # Eg: OSError: [Errno 2] No such file or directory
+            return
 
         # Any kubectl context that isn't marked as safe in your segment config
         # is considered as "production", which you should really be cognizant
