@@ -11,6 +11,9 @@ class Segment(BasicSegment):
         try:
             context = subprocess.check_output(['kubectl', 'config',
                                                'current-context']).strip()
+            # Needs conversion from bytes to a regular string
+            if sys.version_info[0] >= 3:
+                context = str(context, 'utf-8')
         except subprocess.CalledProcessError:
             # CalledProcessError is thrown if non-zero returncode, like if we
             # don't have a kubectl context
